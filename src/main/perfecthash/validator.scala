@@ -3,14 +3,12 @@ package main
 import scala.util.matching.Regex
 
 class validator {
-  {
-    val GAMES = Array("texas-holdem", "omaha-holdem", "five-card-draw")
+    val GAMES: Array[String] = Array("texas-holdem", "omaha-holdem", "five-card-draw")
     val LENGTH_MAP = Map(
       "texas-holdem" -> Array(5, 2, 4),
       "omaha-holdem" -> Array(5, 4, 8),
       "five-card-draw" -> Array(5, 5, 10)
     )
-  }
 
   def validateHands(gameType: String, hands: String): Boolean = {
     var ret:Boolean = True
